@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.epanqui.first;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.example.fundamentals.R;
 
 public class LoginActivity extends AppCompatActivity {
 

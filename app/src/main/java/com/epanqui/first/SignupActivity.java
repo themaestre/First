@@ -1,9 +1,12 @@
-package com.example.fundamentals;
+package com.epanqui.first;
 
 
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.fundamentals.R;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
