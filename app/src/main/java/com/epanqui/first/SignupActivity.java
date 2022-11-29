@@ -1,11 +1,8 @@
 package com.epanqui.first;
 
-
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.fundamentals.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,7 +13,7 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        TextView dateView = (TextView) findViewById(R.id.mydate);
+        TextView dateView =  findViewById(R.id.mydate);
         setDate(dateView);
 
     }

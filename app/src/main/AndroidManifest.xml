@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.epanqui.first">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +16,14 @@
         android:theme="@style/Theme.Fundamentals"
         tools:targetApi="31">
         <activity
-            android:name="com.epanqui.first.LoginActivity"
+            android:name=".Main"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Splash"
             android:exported="true"
             android:theme="@style/MyTheme.NoActionBar">
             <intent-filter>
@@ -23,6 +32,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/MyTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/MyTheme.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

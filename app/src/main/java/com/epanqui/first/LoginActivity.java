@@ -6,19 +6,30 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.example.fundamentals.R;
 
 public class LoginActivity extends AppCompatActivity {
-
+    Button login,cancel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        login = findViewById(R.id.login);
+        cancel = findViewById(R.id.cancel);
+
+        //implementar animacion
+        ImageView estrella = findViewById(R.id.estrella);
+        //Crear animacion
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.fadein);
+        estrella.startAnimation(animation);
+        //Glide
         ImageView img = findViewById(R.id.img);
         Glide.with(this)
                 .load("https://fondosmil.com/fondo/5444.jpg")
@@ -29,14 +40,14 @@ public class LoginActivity extends AppCompatActivity {
                 .circleCrop()
                 .into(img);
     }
-    public void openMain(View v) {
+    /*public void openMain(View v) {
         Intent intent = new Intent(this, SignupActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-    }
+    }*/
     public void openSignup(View v) {
-        Intent intent = new Intent(this, SignupActivity.class);
+        Intent intent = new Intent(this, Main.class/*SignupActivity.class*/);
         startActivity(intent);
     }
 }
