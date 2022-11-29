@@ -4,6 +4,8 @@ This is the **result** of the login in my app
 
 ![login activity](img/login.png)
 
+And the main activity
+
 ![login activity](img/page.png)
 
 
