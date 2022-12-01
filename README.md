@@ -1,11 +1,10 @@
 ## I'm starting to edit the readme file of first
 This is the **splash** of the activity in my app
-![splash activity](img/login.png)
+![splash activity](img/splash.png)
 
 ## Login activity
 
 This is the **result** of the login in my app
-
 ![login activity](img/login.png)
 
 ##sSign up activity
