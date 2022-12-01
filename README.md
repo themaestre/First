@@ -7,18 +7,18 @@ This is the **splash** of the activity in my app
 This is the **result** of the login in my app
 ![login activity](img/login.png)
 
-##sSign up activity
+## Sign up activity
 
 ![sign up activity](img/signup.png)
 
 ## Main activity
-
+Main
 ![main activity](img/main.png)
-
+Main bar
 ![main bar activity](img/main_bar.png)
-
+Sign out
 ![main main sign out activity](img/main_signout.png)
-
+Bottom navigation
 ![main icons activity](img/main_icons.png)
 
 ## Scrolling activity
