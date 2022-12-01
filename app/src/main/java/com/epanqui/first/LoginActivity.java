@@ -15,14 +15,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class LoginActivity extends AppCompatActivity {
-    Button login,cancel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        login = findViewById(R.id.login);
-        cancel = findViewById(R.id.cancel);
 
         //implementar animacion
         ImageView estrella = findViewById(R.id.estrella);
@@ -40,14 +36,14 @@ public class LoginActivity extends AppCompatActivity {
                 .circleCrop()
                 .into(img);
     }
-    /*public void openMain(View v) {
-        Intent intent = new Intent(this, SignupActivity.class);
+    public void openMain(View v) {
+        Intent intent = new Intent(this, Main.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-    }*/
+    }
     public void openSignup(View v) {
-        Intent intent = new Intent(this, Main.class/*SignupActivity.class*/);
+        Intent intent = new Intent(this, SignupActivity.class);
         startActivity(intent);
     }
 }

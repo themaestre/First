@@ -26,12 +26,16 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // casting a la vista a la que aplicamos un menu contextual y la registramos
         WebView mycontext = (WebView) findViewById(R.id.vistaweb);
         registerForContextMenu(mycontext);
 
+        // DENTRO del Oncreate
+        // cast al Layout SwipeRefresh con el que rodeamos la vista en el xml y le colocamos un listener
         swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
+        //La vista dentro es un webview con permiso para zoom
         miVisorWeb = (WebView) findViewById(R.id.vistaweb);
 
         miVisorWeb.getSettings().setBuiltInZoomControls(true);
@@ -39,7 +43,7 @@ public class Main extends AppCompatActivity {
     }
 // DIALOGO MODAL
 
-    /*public void showAlertDialogButtonClicked(Main mainActivity) {
+    public void showAlertDialogButtonClicked(Main mainActivity) {
 
         // setup the alert builder
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
@@ -87,8 +91,8 @@ public class Main extends AppCompatActivity {
         // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
-    }*/
-
+    }
+    // FUERA del Oncreate
     // construimos el Listener que lanza un Toast y desactiva a continuación del Swipe la animación
 
     protected SwipeRefreshLayout.OnRefreshListener
@@ -126,7 +130,7 @@ public class Main extends AppCompatActivity {
             toast.show();
 
         }
-        /*if (id == R.id.item2) {
+        if (id == R.id.item2) {
             Toast toast = Toast.makeText(this, "Fixing", Toast.LENGTH_LONG);
             toast.show();
         }
@@ -143,7 +147,7 @@ public class Main extends AppCompatActivity {
 
         if (id == R.id.item5) {
             showAlertDialogButtonClicked(Main.this);
-        }*/
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -180,7 +184,6 @@ public class Main extends AppCompatActivity {
                         });
 
                 snackbar.show();
-
 
                 return true;
 

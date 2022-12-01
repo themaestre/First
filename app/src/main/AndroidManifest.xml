@@ -16,16 +16,31 @@
         android:theme="@style/Theme.Fundamentals"
         tools:targetApi="31">
         <activity
-            android:name=".Main"
-            android:exported="true">
+            android:name=".MainBab"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+            android:name=".MainBn"
+            android:exported="true"
+            android:label="@string/title_activity_main_bn"
+            android:theme="@style/Theme.First.NoActionBar" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.First.NoActionBar" />
+        <activity
+            android:name=".Main"
+            android:exported="true"
+            android:theme="@style/ActionTheme" />
+        <activity
             android:name=".Splash"
             android:exported="true"
-            android:theme="@style/MyTheme.NoActionBar">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.First.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,20 +54,16 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/MyTheme.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:theme="@style/Theme.First.NoActionBar" />
         <activity
             android:name=".SignupActivity"
             android:exported="true"
             android:parentActivityName=".LoginActivity"
-            android:theme="@style/MyTheme.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:theme="@style/ActionTheme" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
