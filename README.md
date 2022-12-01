@@ -2,7 +2,7 @@
 
 This is the **splash** of the activity in my app
 
-![splash activity](img/splash.png)
+![splash activity](img/splash.gif)
 
 ## Login activity
 
