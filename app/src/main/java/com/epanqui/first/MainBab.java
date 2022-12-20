@@ -15,7 +15,7 @@ public class MainBab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_bab);
+        setContentView(R.layout.activity_mainbab);
 
         // cast al xml
         BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
